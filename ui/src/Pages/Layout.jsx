@@ -7,7 +7,7 @@ const Layout = () => {
   return (
    <>
    <Header/>
-   <div className='pt-80'>  <Home /></div>
+   {/* <div className=''>  <Home /></div> */}
    <Footer/>
    </>
   )
