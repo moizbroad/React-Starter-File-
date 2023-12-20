@@ -2,75 +2,97 @@ import { useState } from "react";
 import React from "react";
 
 const Footer = () => {
+  const [headers, setHeaders] = useState([
+    "Company",
+    "Support",
+    "Products",
+    "Legal",
+    "Resources",
+    "Community",
+  ]);
   const [sections, setSections] = useState([
     {
       id: 1,
-      parent: "Company",
-      title1: "ali",
-      title2: "moiz",
-      title3: "waqs",
-      title4: "why not",
+      title1: "About Us",
+      title2: "Support Center",
+      title3: "Bill Payment",
+      title4: "Privacy Policy",
+      title5: "Resource Center",
+      title6: "Learn how to save on your bills",
     },
     {
       id: 2,
-      parent: "Company2",
-      title1: "usman",
-      title2: "kashid",
-      title3: "jiya",
-      title4: "banana",
+      title1: "Careers",
+      title2: "Contact Us",
+      title3: "Card",
+      title4: "Terms",
+      title5: "Blog ",
+      title6: "Ways to improve your credit",
     },
     {
       id: 3,
-      parent: "Company3",
-      title1: "wahaid",
-      title2: "raqab",
-      title3: "graapes",
-      title4: "orane",
+      title1: "Billers",
+      title2: "How it Works",
+      title3: "Build Credit",
+      title4: "Sign In Verification",
+      title5: "News Letter",
+      title6: "Security FAQ",
     },
-
-    // Add more sections as needed
+    {
+      id: 4,
+      title1: "Pricing",
+      title2: "",
+      title3: "Other",
+      title4: "Bills Process",
+      title5: "Site Map",
+      title6: "",
+    },
+    {
+      id: 5,
+      title1: "Press",
+      title2: "",
+      title3: "",
+      title4: "Bill Cancelled",
+      title5: "Dashboard",
+      title6: "",
+    },
+    {
+      id: 6,
+      title1: "Press",
+      title2: "",
+      title3: "",
+      title4: "Settings",
+      title5: "Payment Schedule",
+      title6: "",
+    },
   ]);
-  const headers = sections.filter((item) => item.parent);
-  const uniqueParents = [...new Set(sections.map((item) => item.parent))];
-  console.log(uniqueParents, "unique");
-
-  //   console.log( headers , "header")
 
   return (
-    <>
-      <table>
+    <div className="">
+      <table className="w-full border-collapse ">
         <thead>
           <tr>
-            {uniqueParents.map((header) => (
-              <th key={header}>{header}</th>
-            ))}
+            {headers.map((item) => {
+              return <th className="  pt-2 text-left  text-lg   font-bold w-[16px]  ">{item}</th>;
+            })}
           </tr>
         </thead>
-        <tbody>
-          {/* {sections.map((item) => (
-            <tr key={item.id}>
-              {uniqueParents.map((header) => {
-                console.log(item[header], "header", item, header);
-
-                return <td key={header}>{item[header]}</td>;
-              })}
-            </tr>
-          ))} */}
-          {
-            sections.map((item) => {
-                if(!item.parent){
-                  return (
-                    <tr>
-                      <td>{item.id}</td>
-                      <td>{item.title1}</td>
-                    </tr>
-                  )
-                }
-              })
-          }
+        <tbody >
+          {sections.map((item) => {
+            return (
+              <tr className="">
+                <td className=" pt-2  font-normal whitespace-no-wrap">{item.title1}</td>
+                <td className=" pt-2 font-normal  whitespace-no-wrap">{item.title2}</td>
+                <td className=" pt-2  font-normal whitespace-no-wrap">{item.title3}</td>
+                <td className=" pt-2  font-normal whitespace-no-wrap">{item.title4}</td>
+                <td className=" pt-2  font-normal whitespace-no-wrap">{item.title5}</td>
+                <td className=" pt-2  font-normal whitespace-no-wrap">{item.title6}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
-    </>
+    </div> 
   );
 };
 

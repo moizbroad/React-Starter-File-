@@ -3,19 +3,19 @@ import React from 'react'
 const Home = () => {
   return (
    <>
-   <div>Home</div>
-   <div>Home</div>
+     <div className='container-wrap'>   
 
-   <div>Home</div>
-   <div>Home</div>
+     <div> hsjhwqjd</div>
+     <div> hsjhwqjd</div>
+     <div> hsjhwqjd</div>
 
+     <div> hsjhwqjd</div>
+     <div> hsjhwqjd</div>
+     <div> hsjhwqjd</div>
+     <div> hsjhwqjd</div>
 
-   <div>Home</div>
-
-   <div>Home</div>
-
-   <div>Home</div>
-   
+     </div>
+    
    </>
   )
 }

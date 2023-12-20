@@ -72,4 +72,14 @@ button:focus-visible {
   }
 } */
 
+/* th{
+  width: 200px;
+}
+td{
+  text-align: center;
+} */
 
+.container-wrap{
+max-width: 1169px;
+margin-inline: auto;
+}

@@ -6,9 +6,15 @@ import Home from '../Components/Home/Home'
 const Layout = () => {
   return (
    <>
+   <div className=''>
+
    <Header/>
-   {/* <div className=''>  <Home /></div> */}
-   <Footer/>
+   <Home />
+  
+
+  <Footer/>
+   </div>
+
    </>
   )
 }
