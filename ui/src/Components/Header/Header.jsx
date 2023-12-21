@@ -1,12 +1,14 @@
 import React from "react";
 import { useState } from "react";
 
+
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [closes, setCloses] = useState(false);
   return (
     <>
-      <mian className="bg-[#8e3d2b] w-full h-full ">
+      <mian className=" w-[100%]  ">
+        <div className="bg-[#E9EAFF]"> 
         <nav className="relative main flex flex-wrap items-center  w-full justify-end xl:justify-between mx-auto pt-6 gap-x-8 container-wrap ">
 
           <div className=" flex items-start justify-start gap-x-3 ">
@@ -42,7 +44,7 @@ const Header = () => {
               open ? "top-[75px] opacity-100" : "top-[-900px]"
             } md:opacity-100`}
           >
-            <section className="lg:relative flex flex-col md:flex-row gap-3 justify-center items-center lg:gap-5 text-lg">
+            <section className="lg:relative flex flex-col md:flex-row gap-3 justify-center items-center lg:gap-5 text-lg bg-[#E9EAFF]">
               <div
                 className="font-window-demi-fog "
                 onClick={() => setCloses(!closes)}
@@ -185,6 +187,7 @@ const Header = () => {
             </button>
           </div>
         </nav>
+        </div>
       </mian>
     </>
   );
