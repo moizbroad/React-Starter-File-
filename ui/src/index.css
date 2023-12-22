@@ -84,6 +84,10 @@ max-width: 1169px;
 margin-inline: auto;
 }
 
+.custom-shadow {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
 /* .home-text{
   color: #2D3353;
 font-size: 56px;

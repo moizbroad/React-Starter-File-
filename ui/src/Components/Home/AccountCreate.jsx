@@ -65,4 +65,4 @@ const AccountCreate = () => {
   );
 };
 
-export default AccountDetails;
+export default AccountCreate;
