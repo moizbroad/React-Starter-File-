@@ -8,10 +8,10 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa6";
 import iphone from "../../assets/icons/icn-app-store.png";
 import play from "../../assets/icons/icn-play-store.png";
-import group1 from '../../assets/icons/group1.png';
-import group2 from '../../assets/icons/group2.png';
-import group3 from '../../assets/icons/group3.png';
-import group4 from '../../assets/icons/group4.png';
+import group1 from "../../assets/icons/group1.png";
+import group2 from "../../assets/icons/group2.png";
+import group3 from "../../assets/icons/group3.png";
+import group4 from "../../assets/icons/group4.png";
 
 const socialIcons = () => {
   return (
@@ -94,118 +94,118 @@ const Footer = () => {
 
   return (
     <>
-    <main className="w-full ">
-       <main className="container-wrap">
-      <div className=" ">
-        <div>
-          {sections.map((item, index) => {
-            let className = "font-bold text-lg";
-            return (
-              <div key={index} className="flex text-left py-2">
-                <div
-                  className={
-                    index === 0 ? `flex-1 ${className}` : "flex-1 text-left"
-                  }
-                >
-                  {item.title1}
-                </div>
-                <div
-                  className={
-                    index === 0 ? `flex-1 ${className}` : "flex-1 text-left"
-                  }
-                >
-                  {item.title2}
-                </div>
-                <div
-                  className={
-                    index === 0 ? `flex-1 ${className}` : "flex-1 text-left"
-                  }
-                >
-                  {item.title3}
-                </div>
-                <div
-                  className={
-                    index === 0 ? `flex-1 ${className}` : "flex-1 text-left"
-                  }
-                >
-                  {item.title4}
-                </div>
-                <div
-                  className={
-                    index === 0 ? `flex-1 ${className}` : "flex-1 text-left"
-                  }
-                >
-                  {item.title5}
-                </div>
-                <div
-                  className={
-                    index === 0 ? `flex-1 ${className}` : "flex-1 text-left"
-                  }
-                >
-                  {item.title6}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      <main className="w-full ">
+        <main className="container-wrap">
+          <div className=" ">
+            <div>
+              {sections.map((item, index) => {
+                let className = "font-bold text-lg";
+                return (
+                  <div key={index} className="flex text-left py-2">
+                    <div
+                      className={
+                        index === 0 ? `flex-1 ${className}` : "flex-1 text-left"
+                      }
+                    >
+                      {item.title1}
+                    </div>
+                    <div
+                      className={
+                        index === 0 ? `flex-1 ${className}` : "flex-1 text-left"
+                      }
+                    >
+                      {item.title2}
+                    </div>
+                    <div
+                      className={
+                        index === 0 ? `flex-1 ${className}` : "flex-1 text-left"
+                      }
+                    >
+                      {item.title3}
+                    </div>
+                    <div
+                      className={
+                        index === 0 ? `flex-1 ${className}` : "flex-1 text-left"
+                      }
+                    >
+                      {item.title4}
+                    </div>
+                    <div
+                      className={
+                        index === 0 ? `flex-1 ${className}` : "flex-1 text-left"
+                      }
+                    >
+                      {item.title5}
+                    </div>
+                    <div
+                      className={
+                        index === 0 ? `flex-1 ${className}` : "flex-1 text-left"
+                      }
+                    >
+                      {item.title6}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
 
-      <div className="container-wrap flex  justify-between items-center pt-8 border-b border-solid border-black pb-12">
+          <div className="container-wrap flex  justify-between items-center pt-8 border-b border-solid border-black pb-12">
+            <div className="flex gap-x-10 w-[100%]">
+              <button className="text-white bg-blue-700 py-2 px-3 border border-black  rounded-md flex items-center gap-x-2">
+                {" "}
+                <img src={iphone} className="w-6 h-6 " /> App Store{" "}
+              </button>
 
+              <button className="text-white bg-blue-700 py-2 px-3 border border-black  rounded-md flex items-center gap-x-2">
+                {" "}
+                <img src={play} className="w-6 h-6 " /> App Store{" "}
+              </button>
+            </div>
 
-        <div className="flex gap-x-10 w-[100%]">
-          <button className="text-white bg-blue-700 py-2 px-3 border border-black  rounded-md flex items-center gap-x-2">
-            {" "}
-            <img src={iphone} className="w-6 h-6 " /> App Store{" "}
-          </button>
+            <div className="w-[100%] pb-2 ">
+              {" "}
+              <p className="text-blue-400 text-right ">
+                {" "}
+                made is Los Angeles with{" "}
+              </p>
+            </div>
+            <hr />
+          </div>
+ 
+          {/* <div className="flex gap-x-24 ">
+            <p> Copyright © 2023 Pay Me Back Later.</p>
 
-          <button className="text-white bg-blue-700 py-2 px-3 border border-black  rounded-md flex items-center gap-x-2">
-            {" "}
-            <img src={play} className="w-6 h-6 " /> App Store{" "}
-          </button>
-        </div>
+            <div className="flex ">
+              <img src={group1} />
+              <p className="ml-2 mr-2">
+                {" "}
+                PayMeBackLater USA <span className="ml-2">|</span>
+              </p>
+              {""}
 
-        <div className="w-[100%] pb-2 ">
-          {" "}
-          <p className="text-blue-400 text-right "> made is Los Angeles with </p>
-        </div>
-        <hr/>
+              <img src={group1} />
+              <p className="ml-2 mr-2">
+                {" "}
+                PayMeBackLater USA <span className="ml-2">|</span>
+              </p>
+              {""}
 
+              <img src={group1} />
+              <p className="ml-2 mr-2">
+                {" "}
+                PayMeBackLater USA <span className="ml-2">|</span>
+              </p>
+              {""}
 
-      </div>
+              <img src={group1} />
+              <p className="ml-2 mr-2"> PayMeBackLater USA</p>
+              {""}
+            </div>
+          </div> */}
 
-      
-
-      <div className="flex gap-x-24 w-[100%]">  
-        <p> Copyright © 2023 Pay Me Back Later.</p>
-
-        <div className="flex ">
-            <img src={group1} />
-            <p className="ml-2 mr-2"> PayMeBackLater USA <span className="ml-2">|</span></p>
-            {""}
-
-            <img src={group1} />
-            <p className="ml-2 mr-2"> PayMeBackLater USA <span className="ml-2">|</span></p>
-            {""}
-
-            <img src={group1} />
-            <p className="ml-2 mr-2"> PayMeBackLater USA <span className="ml-2">|</span></p>
-            {""}
-
-            <img src={group1} />
-            <p className="ml-2 mr-2"> PayMeBackLater USA</p>
-            {""}
-             </div>
-        
-         </div>
-
-      
-
-      
-
+        </main>
       </main>
-      </main>
-      
     </>
   );
 };

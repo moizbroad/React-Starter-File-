@@ -5,6 +5,8 @@ import Home from '../Components/Home/Home'
 import AccountCreate from '../Components/Home/AccountCreate'
 import BillPaySetups from '../Components/Home/BillPaySetups'
 import Cards from '../Components/Home/Cards'
+import Slider from '../Components/Home/Slider'
+import GetStartedFree from '../Components/Home/GetStartedFree'
 
 const Layout = () => {
   return (
@@ -16,6 +18,8 @@ const Layout = () => {
    <AccountCreate/>
    <BillPaySetups/>
    <Cards/>
+   <Slider/>
+   <GetStartedFree/>
   
 
   <Footer/>

@@ -8,22 +8,22 @@ import account6 from '..//..//assets/icons/account6.png'
 const AccountCreate = () => {
   return (
     <main className="container-wrap  pb-11">
-      <section className="grid grid-cols-3 space-x-6 pt-10  ">
-        <div className="bg-red  pt-40  text-5xl font-bold leading-tight	 ">
+      <section className="grid grid-cols-1 md:grid-cols-3 space-x-6 pt-10   ">
+        <div className="bg-red  pt-40  text-5xl font-bold leading-tight	text-center lg:text-start ">
           {" "}
           <p className=" "> Pay Your Bills <br/> On Time with PayMeBackLater</p>
         </div>
 
 
-        <div> <img src={mobile}/> </div>
+        <div className="flex justify-center lg:justify-start ">  <img src={mobile}/> </div>
 
 
-        <div className=" pt-12 "> 
-        <div className="flex items-start"> 
-             <div className=""> <img src={account4} className=" pr-2"/></div>
-            <div>
-            <p className="font-bold text-lg pb-3 "> Create account and upload your bills </p>
-            <p className=""> Create account to start managing your bills effortlessly.</p>
+        <div className=" pt-12  "> 
+        <div className="flex items-start "> 
+             <div className="flex justify-center lg:justify-start"> <img src={account4} className=" pr-2 flex justify-center lg:justify-start"/></div>
+            <div className="  text-center lg:text-start">
+            <p className="font-bold text-lg pb-3  text-center lg:text-start"> Create account and upload your bills </p>
+            <p className="  text-center lg:text-start"> Create account to start managing your bills effortlessly.</p>
             </div>
         </div>
 

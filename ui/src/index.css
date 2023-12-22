@@ -88,6 +88,10 @@ margin-inline: auto;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
+.react-multi-carousel-dot-list {
+  margin-top: 150px;
+}
+
 /* .home-text{
   color: #2D3353;
 font-size: 56px;
