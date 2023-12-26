@@ -10,6 +10,9 @@ export default {
         nunito: ['Nunito', 'sans-serif,', 'Circular Std'],
       },
     },
+    // screens:{
+    //   'xs':'400px'
+    // }
   },
   plugins: [],
 }

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { Navigate, useNavigate } from 'react-router';
 import Layout from './Pages/Layout';
+import Signup from './Pages/Signup';
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
   <BrowserRouter>
   <Routes>
 
-    <Route path="/home" element={<Layout/>} exact />
+    <Route path="/" element={<Layout/>} exact />
+    <Route path="/signup" element={<Signup/>} exact />
   </Routes>
   
   </BrowserRouter>

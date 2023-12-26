@@ -9,9 +9,9 @@ const AccountCreate = () => {
   return (
     <main className="container-wrap  pb-11">
       <section className="grid grid-cols-1 md:grid-cols-3 space-x-6 pt-10   ">
-        <div className="bg-red  pt-40  text-5xl font-bold leading-tight	text-center lg:text-start ">
+        <div className="bg-red  pt-0 lg:pt-40  text-4xl font-bold leading-tight	text-center lg:text-start ">
           {" "}
-          <p className=" "> Pay Your Bills <br/> On Time with PayMeBackLater</p>
+          <p className=" "> Pay Your Bills On Time <br/> with PayMeBackLater</p>
         </div>
 
 
@@ -55,7 +55,7 @@ const AccountCreate = () => {
             </div>
         </div>
 
-        <div className="flex  justify-center pt-4"> <button class="bg-blue-600 border  rounded-md  font-medium  py-4  lg:px-6 lg:py-3"> Get Started</button></div>
+        <div className="flex  justify-center pt-4"> <button class="bg-blue-600 border text-white  rounded-lg  font-medium  py-3 px-6  lg:px-6 lg:py-3 "> Get Started</button></div>
 
         </div>
 

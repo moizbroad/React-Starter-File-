@@ -41,8 +41,8 @@ const Slider = () => {
              <div className="pb-8"> <p className="text-center"> join a community of  satisfied users who have experienced the convenience and excellent 
                 of our service ... <br/> you're in great hand! </p></div>
 
-                <div className="flex space-x-4 justify-center">
-                    <section className="rounded-2xl bg-[#E9EAFF] py-2 px-12 flex items-center space-x-4"> 
+                <div className="flex space-x-4 justify-center ">
+                    <section className="rounded-2xl bg-[#E9EAFF] py-1 px-2 lg:px-6 flex items-center space-x-4"> 
                     <div><img src={vector} /> </div>
                     <div> 4.9</div>
                     <div> On Facebook</div>
@@ -50,7 +50,7 @@ const Slider = () => {
                     </section>
 
 
-                    <section className="rounded-2xl bg-[#E9EAFF] py-2 px-12 flex items-center space-x-4"> 
+                    <section className="rounded-2xl bg-[#E9EAFF] py-2 px-2 lg:px-6 flex items-center space-x-4"> 
                     <div><img src={vector} /> </div>
                     <div> 5.0 </div>
                     <div> On Google</div>
@@ -58,7 +58,7 @@ const Slider = () => {
                     </section>
                     
 
-                    <section className="rounded-2xl bg-[#E9EAFF] py-2 px-12 flex items-center space-x-4"> 
+                    <section className="rounded-2xl bg-[#E9EAFF] py-2 px-2 lg:px-6  flex items-center space-x-4"> 
                     <div><img src={vector} /> </div>
                     <div> 4.9</div>
                     <div> On App Store</div>
@@ -67,7 +67,8 @@ const Slider = () => {
                 </div>
              </div>
 
-        <div className=" pb-24 pt-24 ">  
+        <div className=" pb-16 pt-24
+         ">  
       <Carousel responsive={responsive} swipeable showDots infinite>
         <div className="mb-24  max-w-[500px]  rounded-lg  custom-shadow space-x-1">
           <section className=" flex-col justify-center ">

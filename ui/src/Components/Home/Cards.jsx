@@ -98,10 +98,10 @@ const Cards = () => {
   ]);
 
   return (
-    <section className="container-wrap pt-6 pb-10">
+    <section className="container-wrap pt-6 pb-10 px-6 lg:px-0">
 
 <h1 className="text-center font-bold text-xl" > pay and ant types of bill with<br/> PayMEBackLater</h1>
-      <div className="grid grid-cols-3 gap-6 pt-12">
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-6 pt-12">
 
        
         {cards.map((item, index) => (

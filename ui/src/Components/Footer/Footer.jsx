@@ -95,7 +95,7 @@ const Footer = () => {
   return (
     <>
       <main className="w-full ">
-        <main className="container-wrap">
+        <main className="container-wrap pt-10  ">
           <div className=" ">
             <div>
               {sections.map((item, index) => {

@@ -89,7 +89,7 @@ margin-inline: auto;
 }
 
 .react-multi-carousel-dot-list {
-  margin-top: 150px;
+  margin-top: 10px;
 }
 
 /* .home-text{
@@ -99,3 +99,8 @@ font-style: normal;
 font-weight: 200 !important;
 line-height: 64px; 
 } */
+
+.wrap1{
+  max-width: 1066px;
+margin-inline: auto;
+}

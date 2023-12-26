@@ -5,15 +5,15 @@ import pay3 from "..//..//assets/icons/pay3.png";
 
 const BillPaySetups = () => {
   return (
-    <section className="w-[100%] bg-[#E9EAFF]">
-      <section className="container-wrap pt-12 pb-14">
-        <div className="grid grid-cols-3 gap-x-8">
+    <section className="w-[100%] bg-[#E9EAFF] ">
+      <section className="container-wrap pt-12 pb-14 ">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-8 px-6 ">
           <section className="">
             <div className="flex justify-center pb-4">
               {" "}
               <img src={pay1} />
             </div>
-            <div className="font-bold text-lg flex justify-center text-center ">
+            <div className="font-bold text-lg flex justify-center text-center  ">
               The quickest and most effortless  <br/> {"   "}method to pay any bill{" "}
             </div>
             <div className="pt-4 flex justify-center text-center">
@@ -23,7 +23,7 @@ const BillPaySetups = () => {
 
 
           <section>
-            <div className="flex justify-center pb-4">
+            <div className="flex justify-center pb-4 pt-6 lg:pt-0">
               {" "}
               <img src={pay2} />
             </div>
@@ -37,7 +37,7 @@ const BillPaySetups = () => {
 
 
           <section>
-            <div className="flex justify-center pb-4">
+            <div className="flex justify-center pb-4 pt-6 lg:pt-0">
               {" "}
               <img src={pay3} />
             </div>

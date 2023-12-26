@@ -13,7 +13,7 @@ const Home = () => {
             <div className="flex-col lg:w-[729px]  ">
               <div>
                 {" "}
-                <h5 className=" home-text text-6xl font-bold text-center lg:text-start ">
+                <h5 className=" home-text text-5xl font-bold text-center lg:text-start ">
                   {" "}
                   Discover a smarter <br /> way to pay your bills{" "}
                 </h5>{" "}
@@ -22,18 +22,14 @@ const Home = () => {
                 {" "}
                 <p className="pb-6">
                   {" "}
-                  Use our platform to easily upload bills for things like
-                  utilities, car <br /> payments, rent, insurance, and more.
-                  Enjoy the convenience of quick
-                  <br /> billpayments, so you won't have to worry about due
-                  dates or late fees.
-                  <br />
-                  It's a simple subscription, no fuss involved{" "}
+                  Use our platform to easily upload bills for things like utilities, car payments, rent, insurance, <br/>
+                  and more. Enjoy the convenience of quick bill payments, so you won't have to worry about  <br/>
+                  due dates or late fees. It's a simple subscription, no fuss involved. 
                 </p>
               </div>
               <div className="pb-[35px]  text-center lg:text-start ">
                 {" "}
-                <button className="bg-blue-600 border border-black rounded-md  font-medium  py-4  lg:px-6 lg:py-3 ">
+                <button className="bg-blue-600 border border-black rounded-md text-white font-medium  py-2  px-2 lg:px-6 lg:py-3 ">
                   {" "}
                   get started for free
                 </button>{" "}
@@ -44,7 +40,7 @@ const Home = () => {
               </div>
 
               <div className="flex gap-x-6 w-[100%] pb-24  justify-center lg:justify-start  ">
-                <button className="text-white bg-[#252849] font-semibold py-2 px-3 border border-black  rounded-md flex items-center gap-x-2">
+                <button className="text-white bg-[#252849] font-semibold py-2 px-3 border border-[#252849]  rounded-md flex items-center gap-x-2">
                   {" "}
                   <img src={iphone} className="w-6 h-6 " /> App Store{" "}
                 </button>
@@ -59,7 +55,8 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="  flex justify-center  lg:self-start">
+            <div className="  flex justify-center  lg:self-start lg:pl-[87px] pb-12 lg:pb-0 ">
+
               <img src={team1}  />
             </div>
           </section>
