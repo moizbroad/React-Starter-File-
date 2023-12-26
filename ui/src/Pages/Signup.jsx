@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Signup = () => {
-  const [selectedDiv, setSelectedDiv] = useState(null);
+  const [selectedDiv, setSelectedDiv] = useState(0);
 
   const handleDivClick = (index) => {
     setSelectedDiv(index);
@@ -10,13 +10,20 @@ const Signup = () => {
   return (
     <main className="wrap1">
       <section className="pt-48 flex space-x-10">
-        {[0, 1, 2].map((index) => (
-          <div
-            key={index}
-            className={`bg-${selectedDiv === index ? "blue-800" : "[#EAEAFF]"} h-3 w-[201px]  rounded-full`}
-            onClick={() => handleDivClick(index)}
-          ></div>
-        ))}
+        <div
+          className={`bg-${selectedDiv === 0 ? "blue-800" : "[#EAEAFF]"} h-3 w-[201px]  rounded-full`}
+          onClick={() => handleDivClick(0)}
+        ></div>
+
+        <div
+          className={`bg-${selectedDiv === 1 ? "blue-800" : "[#EAEAFF]"} h-3 w-[201px]  rounded-full`}
+          onClick={() => handleDivClick(1)}
+        ></div>
+
+        <div
+          className={`bg-${selectedDiv === 2 ? "blue-800" : "[#EAEAFF]"} h-3 w-[201px]  rounded-full`}
+          onClick={() => handleDivClick(2)}
+        ></div>
       </section>
     </main>
   );
