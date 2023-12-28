@@ -31,7 +31,7 @@ const Home = () => {
                 {" "}
                 <button className="bg-blue-600 border border-black rounded-md text-white font-medium  py-2  px-2 lg:px-6 lg:py-3 ">
                   {" "}
-                  get started for free
+                  Get started for free
                 </button>{" "}
               </div>
 

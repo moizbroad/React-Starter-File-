@@ -1,9 +1,15 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+// import Login from '..//Auth/Login/Login'
 
 const Header = () => {
+  // const Navigate =  useNavigate();
+  const navigate = useNavigate();
+
   const [open, setOpen] = useState(false);
   const [closes, setCloses] = useState(false);
+
   return (
     <>
       <mian className=" w-[100%]  ">
@@ -153,8 +159,12 @@ const Header = () => {
                     {" "}
                     Billers
                   </button>
-                  <button className="border border-black py-4 lg:px-6 lg:py-3 rounded-md">
-                    {" "}
+                  <button
+                    className="border border-black py-4 lg:px-6 lg:py-3 rounded-md"
+                    onClick={() => {
+                      navigate("/login");
+                    }}
+                  >
                     Login
                   </button>
                 </div>
@@ -179,7 +189,12 @@ const Header = () => {
                 {" "}
                 Billers
               </button>
-              <button className="border border-black px-3 py-1 rounded-md">
+              <button
+                className="border border-black px-3 py-1 rounded-md"
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
                 {" "}
                 Login
               </button>

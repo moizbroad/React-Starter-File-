@@ -19,6 +19,11 @@ import eduaction from '..//..//assets/cards/Eduaction.svg';
 
 
 const Cards = () => {
+  // const [selectedDiv, setSelectedDiv] = useState(0);
+
+  // const handleDivClick = (index) => {
+  //   setSelectedDiv(index);
+  // };
   const [cards, setCards] = useState([
     {
       image: rent,
@@ -114,6 +119,8 @@ const Cards = () => {
           </div>
         ))}
       </div>
+
+      
     </section>
   );
 };

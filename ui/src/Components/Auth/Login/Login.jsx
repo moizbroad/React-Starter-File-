@@ -1,15 +1,15 @@
 import React from "react";
 import { useState } from "react";
-import "tw-elements-react/dist/css/tw-elements-react.min.css";
-import InputField from "../../CustomComponent/InputField";
+import Header from "../../Header/Header";
 import imagesign from "..//..//../assets/icons/img-sign-up-screen-4.svg";
 import usalogo from "..//..//..//assets/icons/usalogo.png";
-import openlock from '..//..//../assets/icons/openlock.png';
+import InputField from "../../CustomComponent/InputField";
+import Button from '../../CustomComponent/Button';
 
-const LetGetStarted = () => {
+const login = () => {
   const [value, setValue] = useState("");
   const [isValid, setIsValid] = useState(true);
-  const [isActive, setIsActive] = useState(false); // checkbox
+  // const [isActive, setIsActive] = useState(false); // checkbox
 
   const handleChange = (event) => {
     const inputValue = event.target.value;
@@ -25,17 +25,13 @@ const LetGetStarted = () => {
       setValue(inputValue);
     }
   };
-
-  // checkbox
-
-  const handleToggle = () => {
-    setIsActive(!isActive);
-  };
   return (
     <main className="wrap1">
-      <section className="grid grid-cols-2 gap-x-[260px]">
-         <div>
-           <div className="mt-8 flex  flex-col  ">
+      <Header />
+
+      <section className="grid grid-cols-2 gap-x-[260px] mt-16">
+        <div>
+          <div className="mt-8 flex  flex-col  ">
             <div className="flex  justify-center">
               <svg
                 width="90"
@@ -51,67 +47,34 @@ const LetGetStarted = () => {
               </svg>
             </div>
 
-            <div className=" text-center mt-2 ">
-              <h1 className="font-bold text-3xl pb-1"> Let's gets Started </h1>
+            <div classN ame=" text-center mt-2 ">
+              <h1 className="font-bold text-3xl pb-1 text-center"> Login </h1>
               <p> Tell us a bit about yourself. We just need the basics</p>
             </div>
           </div>
 
-          <div className="flex  flex-col gap-y-2 relative mt-4 ">
-            <label htmlFor="myInput"></label>
-            <img src={usalogo} className="w-5 h-5 absolute top-5 left-1" />
-            <input
-              className="border border-blue-600 py-2 px-9 rounded-lg "
+          <div className="flex  flex-col gap-y-2 relative mt-4  ">
+            <img src={usalogo} className="w-5 h-5 absolute top-2 left-1 z-10" />
+            <InputField
+              className="px-8 py-6"
               type=""
               id="number"
               value={value}
               onChange={handleChange}
-              // onChange={handleChange}
               placeholder="Usa number"
             />
 
-            <label htmlFor="myInput"></label>
-            <input
-              className="border border-blue-600 py-2 px-4 rounded-lg "
-              type="text"
-              id="first Name"
-              // value={value}
-              // onChange={handleChange}
-              placeholder="First Name "
-            />
-
-            <label htmlFor="myInput"></label>
-            <input
-              className="border border-blue-600 py-2 px-4 rounded-lg "
-              type="text"
-              id="Last Name"
-              // value={value}
-              // onChange={handleChange}
-              placeholder="Last Name"
-            />
-          </div>
-
-          <div className="flex  justify-between mt-5">
-            <p> I have referral code </p>
-
-            <div className="flex justify-end">
-              <input
-                className="mr-2  mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-neutral-100 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-neutral-600 dark:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckDefault"
-              />
-              <label
-                className="inline-block pl-[0.15rem] hover:cursor-pointer"
-                htmlFor="flexSwitchCheckDefault"
-              ></label>
+            <div className="flex  space-x-1 mt-5 text-center  ">
+              {" "}
+              <Button className="!w-full "> Login </Button>
             </div>
           </div>
-          <div className="flex  space-x-1 mt-5"> <button className="px-[165px] py-2 flex items-center rounded-lg bg-blue-600  gap-x-2 text-white">  <img src={openlock} className="w-5 h-4"/> Continue </button></div>
+
+          <p className="text-center text-blue-600 text-sm mt-5 border border-blue-600 py-2 rounded-lg hover">
+            {" "}
+            I don’t have an account{" "}
+          </p>
         </div>
-
-
-
 
         <div className="flex justify-center align-top">
           {" "}
@@ -122,4 +85,4 @@ const LetGetStarted = () => {
   );
 };
 
-export default LetGetStarted;
+export default login;
