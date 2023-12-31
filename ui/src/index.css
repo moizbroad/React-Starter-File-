@@ -104,3 +104,11 @@ line-height: 64px;
   max-width: 1066px;
 margin-inline: auto;
 }
+
+.fullwidth{
+  display:block;
+}
+
+.login-screen > div {
+background-color:transparent;
+}

@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <div className="bg-[#E9EAFF]">
         <div className="container-wrap ">
-          <section className="pt-[80px] flex flex-col lg:flex-row   ">
+          <section className="pt-[107px] flex flex-col lg:flex-row   ">
             <div className="flex-col lg:w-[729px]  ">
               <div>
                 {" "}

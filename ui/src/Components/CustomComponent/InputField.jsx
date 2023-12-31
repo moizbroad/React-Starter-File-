@@ -48,7 +48,7 @@ const InputField = (props) => {
 
       <div className='relative'>
         <input 
-          className="block w-full appearance-none rounded-md border border-blue-600 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+          className="block w-full mt-2.5 appearance-none rounded-lg border border-blue-600 px-3 py-3 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
           id={id}
           label={label}
           max={max}

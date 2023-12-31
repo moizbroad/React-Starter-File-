@@ -27,11 +27,11 @@ const login = () => {
   };
   return (
     <main className="wrap1">
-      <Header />
+      <div  className="login-screen"> <Header className="login-screen" /></div>
 
       <section className="grid grid-cols-2 gap-x-[260px] mt-16">
         <div>
-          <div className="mt-8 flex  flex-col  ">
+          <div className="mt-8 flex  flex-col  justify-center ">
             <div className="flex  justify-center">
               <svg
                 width="90"
@@ -47,26 +47,32 @@ const login = () => {
               </svg>
             </div>
 
-            <div classN ame=" text-center mt-2 ">
-              <h1 className="font-bold text-3xl pb-1 text-center"> Login </h1>
+            <div className=" text-center mt-2  ">
+              <h1 className="font-bold text-3xl pb-1 "> Login </h1>
               <p> Tell us a bit about yourself. We just need the basics</p>
             </div>
           </div>
 
           <div className="flex  flex-col gap-y-2 relative mt-4  ">
-            <img src={usalogo} className="w-5 h-5 absolute top-2 left-1 z-10" />
-            <InputField
-              className="px-8 py-6"
+          <img src={usalogo} className="w-5 h-5 absolute top-3 left-1" />
+            <input
+              className="border border-blue-600 py-2 px-9 rounded-lg "
               type=""
               id="number"
               value={value}
               onChange={handleChange}
+              // onChange={handleChange}
               placeholder="Usa number"
             />
 
             <div className="flex  space-x-1 mt-5 text-center  ">
               {" "}
-              <Button className="!w-full "> Login </Button>
+             
+              <div className="flex  space-x-1 mt-2"> <button className="px-[170px] py-2 flex items-center rounded-lg bg-blue-600  gap-x-2 text-white">  Continue </button></div>
+
+
+
+
             </div>
           </div>
 

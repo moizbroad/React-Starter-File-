@@ -9,16 +9,12 @@ import openlock from '..//..//../assets/icons/openlock.png';
 
 
 const Verification = () => {
-
-
- 
-
   
   return (
    
 
     <main className="wrap1">
-    <section className="grid grid-cols-2 gap-x-[260px]">
+    <section className="grid lg:grid-cols-2 gap-x-[260px]">
        <div>
          <div className="mt-10 flex  flex-col  ">
           <div className="flex  justify-center">
@@ -39,12 +35,27 @@ const Verification = () => {
           <div className=" text-center mt-5">
             <h1 className="font-bold text-3xl pb-1"> Let's gets Started </h1>
             <p className='mt-3 '> Please enter the verification code we <br/>
-just sent to (123) 589-5694</p>
+                            just sent to (123) 589-5694</p>
           </div>
         </div>
 
+
+
+
         <div className="flex  space-x-4 justify-center mt-6 ">
-         
+          <div className=''> 
+          <label htmlFor="myInput"></label>
+          <input
+            className="border border-blue-600 py-2 px-4 rounded-lg w-11 bg-[#EAEAFF] "
+            type="text"
+            id="first Name"
+            onFocus={true}
+            autoFocus={true}
+            // value={value}
+            // onChange={handleChange}
+            placeholder=" "
+          />
+          </div>
 
           <div className=''> 
           <label htmlFor="myInput"></label>
@@ -52,6 +63,8 @@ just sent to (123) 589-5694</p>
             className="border border-blue-600 py-2 px-4 rounded-lg w-11 bg-[#EAEAFF] "
             type="text"
             id="first Name"
+            onFocus={true}
+            autoFocus={true}
             // value={value}
             // onChange={handleChange}
             placeholder=" "
@@ -92,21 +105,7 @@ just sent to (123) 589-5694</p>
             // onChange={handleChange}
             placeholder=" "
           />
-          </div>
-
-          <div className=''> 
-          <label htmlFor="myInput"></label>
-          <input
-            className="border border-blue-600 py-2 px-4 rounded-lg w-11 bg-[#EAEAFF] "
-            type="text"
-            id="first Name"
-            // value={value}
-            // onChange={handleChange}
-            placeholder=" "
-          />
-          </div>
-
-          
+          </div>         
         </div>
 
         <div className="flex  justify-center mt-4 ">
@@ -115,13 +114,13 @@ just sent to (123) 589-5694</p>
 
         
         </div>
-        <div className="flex  space-x-1 mt-5"> <button className="px-[165px] py-2 flex items-center rounded-lg bg-blue-600  gap-x-2 text-white">  <img src={openlock} className="w-5 h-4"/> Continue </button></div>
+        <div className="flex  space-x-1 mt-5 px-4 lg:px-0"> <button className=" w-[100%] justify-center py-2 flex items-center rounded-lg bg-blue-600  gap-x-2 text-white">  <img src={openlock} className="w-5 h-4"/> Continue </button></div>
       </div>
 
 
 
 
-      <div className="flex justify-center align-top">
+      <div className="flex justify-center align-top mt-10 lg:mt-0">
         {" "}
         <img src={imagesign} />{" "}
       </div>

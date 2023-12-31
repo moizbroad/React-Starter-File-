@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        nunito: ['Nunito', 'sans-serif,', 'Circular Std'],
+        nunito: ['Nunito', 'sans-serif,', 'Circular-std'],
       },
     },
     // screens:{

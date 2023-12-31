@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <>
-      <mian className=" w-[100%]  ">
+      <mian className=" w-[100%] ">
         <div className="bg-[#E9EAFF]">
           <nav className="relative main flex flex-wrap items-center  w-full justify-end xl:justify-between mx-auto pt-6 gap-x-8 container-wrap ">
             <div className=" flex items-start justify-start gap-x-3 ">

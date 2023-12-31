@@ -43,12 +43,12 @@ const AccountCreate = () => {
              <div className=""> <img src={account6} className=" pr-2"/></div>
             <div>
             <p className="font-bold text-lg pb-3 "> Connect your Bank Account </p>
-            <p className="">  Connect your Bank Account with our secure partner,paid</p>
+            <p >  Connect your Bank Account with our secure partner,paid</p>
             </div>
         </div>
 
         <div className="flex items-start pt-4"> 
-             <div className=""> <img src={account5} className=" pr-2"/></div>
+             <div > <img src={account5} className=" pr-2"/></div>
             <div>
             <p className="font-bold text-lg pb-3 ">Your Bills Get Paid </p>
             <p className=""> Let us handle the heavy lifting.see your bills smoothly get paid   </p>

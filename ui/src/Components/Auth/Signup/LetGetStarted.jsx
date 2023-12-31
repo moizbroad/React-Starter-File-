@@ -4,7 +4,8 @@ import "tw-elements-react/dist/css/tw-elements-react.min.css";
 import InputField from "../../CustomComponent/InputField";
 import imagesign from "..//..//../assets/icons/img-sign-up-screen-4.svg";
 import usalogo from "..//..//..//assets/icons/usalogo.png";
-import openlock from '..//..//../assets/icons/openlock.png';
+import openlock from "..//..//../assets/icons/openlock.png";
+import Button from "../../CustomComponent/Button";
 
 const LetGetStarted = () => {
   const [value, setValue] = useState("");
@@ -33,9 +34,9 @@ const LetGetStarted = () => {
   };
   return (
     <main className="wrap1">
-      <section className="grid grid-cols-2 gap-x-[260px]">
-         <div>
-           <div className="mt-8 flex  flex-col  ">
+      <section className="grid lg:grid-cols-2 md:grid-cols-2 gap-x-[260px] px-4 lg:px-0">
+        <div>
+          <div className="mt-8 flex  flex-col  ">
             <div className="flex  justify-center">
               <svg
                 width="90"
@@ -58,8 +59,7 @@ const LetGetStarted = () => {
           </div>
 
           <div className="flex  flex-col gap-y-2 relative mt-4 ">
-            <label htmlFor="myInput"></label>
-            <img src={usalogo} className="w-5 h-5 absolute top-5 left-1" />
+            <img src={usalogo} className="w-5 h-5 absolute top-3 left-1" />
             <input
               className="border border-blue-600 py-2 px-9 rounded-lg "
               type=""
@@ -70,25 +70,9 @@ const LetGetStarted = () => {
               placeholder="Usa number"
             />
 
-            <label htmlFor="myInput"></label>
-            <input
-              className="border border-blue-600 py-2 px-4 rounded-lg "
-              type="text"
-              id="first Name"
-              // value={value}
-              // onChange={handleChange}
-              placeholder="First Name "
-            />
+            <InputField type="text" id="First Name" placeholder="First Name " />
 
-            <label htmlFor="myInput"></label>
-            <input
-              className="border border-blue-600 py-2 px-4 rounded-lg "
-              type="text"
-              id="Last Name"
-              // value={value}
-              // onChange={handleChange}
-              placeholder="Last Name"
-            />
+            <InputField type="text" id="First Name" placeholder="Last Name " />
           </div>
 
           <div className="flex  justify-between mt-5">
@@ -100,20 +84,40 @@ const LetGetStarted = () => {
                 type="checkbox"
                 role="switch"
                 id="flexSwitchCheckDefault"
+                onClick={""}
               />
               <label
                 className="inline-block pl-[0.15rem] hover:cursor-pointer"
                 htmlFor="flexSwitchCheckDefault"
               ></label>
             </div>
+
+            
+              {" "}
+             
+        
+
           </div>
-          <div className="flex  space-x-1 mt-5"> <button className="px-[165px] py-2 flex items-center rounded-lg bg-blue-600  gap-x-2 text-white">  <img src={openlock} className="w-5 h-4"/> Continue </button></div>
-        </div>
+         
+            {" "}
+            {/* <button className="px-[165px] py-2 flex items-center rounded-lg bg-blue-600  gap-x-2 text-white">
+              {" "}
+              <img src={openlock} className="w-5 h-4" /> Continue{" "}
+            </button> */}
+            <div className="flex mt-5">
+              {" "}
+              <button className=" py-2 justify-center w-[100%] flex items-center rounded-lg bg-blue-600  gap-x-2 text-white">
+                {" "}
+                <img src={openlock} className="w-5 h-4" /> Continue{" "}
+              </button>
+            </div>
 
 
 
+          </div>
+        
 
-        <div className="flex justify-center align-top">
+        <div className="flex justify-center align-top mt-10 md:mt-10">
           {" "}
           <img src={imagesign} />{" "}
         </div>
