@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "..//Components/Header/Header";
+import Header from "../Components/HeaderSection/Header";
 // import LetGetStarted from '../Components/Auth/Signup/LetGetStarted'
 import LetGetStarted from "../Components/Auth/Signup/LetGetStarted";
 import Verification from "../Components/Auth/Signup/Verification";

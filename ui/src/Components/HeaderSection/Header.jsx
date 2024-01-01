@@ -1,6 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import group1 from "../../assets/icons/group1.png";
+import { IoMdMenu } from "react-icons/io";
+import { ImCross } from "react-icons/im";
 // import Login from '..//Auth/Login/Login'
 
 const Header = () => {
@@ -14,7 +17,7 @@ const Header = () => {
     <>
       <mian className=" w-[100%] ">
         <div className="bg-[#E9EAFF]">
-          <nav className="relative main flex flex-wrap items-center  w-full justify-end xl:justify-between mx-auto pt-6 gap-x-8 container-wrap ">
+          <nav className="relative main flex flex-wrap items-center  w-full justify-end xl:justify-between mx-auto pt-[51px] gap-x-8 container-wrap ">
             <div className=" flex items-start justify-start gap-x-3 ">
               <svg
                 width="20"
@@ -29,6 +32,7 @@ const Header = () => {
                 />
               </svg>
 
+              <div className="flex justify-start  ">
               <svg
                 width="264"
                 height="27"
@@ -41,23 +45,24 @@ const Header = () => {
                   fill="#2E3456"
                 />
               </svg>
+              </div>
             </div>
 
             <div
-              className={`border-t top-20 h-screen w-full bg-gray-400 text-white md:text-black md:bg-white md:h-auto md:w-auto md:flex gap-x-5 md:justify-end absolute md:static transition-all duration-700 ease-in ${
+              className={` top-20 h-screen w-full  text-white md:text-black md:bg-white md:h-auto md:w-auto md:flex gap-x-5 md:justify-end absolute md:static transition-all duration-700 ease-in ${
                 open ? "top-[75px] opacity-100" : "top-[-900px]"
               } md:opacity-100`}
             >
-              <section className="lg:relative flex flex-col md:flex-row gap-3 justify-center items-center lg:gap-5 text-lg bg-[#E9EAFF]">
+              <section className="lg:relative flex flex-col md:flex-row gap-3 justify-center items-center lg:gap-5 text-lg bg-white md:bg-[#E9EAFF]  ">
                 <div
-                  className="font-window-demi-fog "
+                  className="font-window-demi-fog text-black "
                   onClick={() => setCloses(!closes)}
                 >
                   {" "}
                   Products
                 </div>
                 {closes && (
-                  <section className="lg:absolute top-12 bg-cyan-200   border-b-2  py-3">
+                  <section className="lg:absolute top-12 bg-white   border-b-2  py-3">
                     <div className="px-4">
                       <div className="flex  gap-x-3">
                         <span className="">
@@ -81,7 +86,7 @@ const Header = () => {
                           <h1 className="text-indigo-700 text-xl font-bold">
                             Bill Payments
                           </h1>
-                          <p>
+                          <p className="text-black">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Laboriosam qui eos quas.
                           </p>
@@ -109,7 +114,7 @@ const Header = () => {
                           <h1 className="text-indigo-700 text-xl font-bold">
                             Bill Payments
                           </h1>
-                          <p>
+                          <p className="text-black">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Laboriosam qui eos quas.
                           </p>
@@ -137,7 +142,7 @@ const Header = () => {
                           <h1 className="text-indigo-700 text-xl font-bold">
                             Bill Payments
                           </h1>
-                          <p>
+                          <p className="text-black">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Laboriosam qui eos quas.
                           </p>
@@ -147,20 +152,20 @@ const Header = () => {
                   </section>
                 )}
 
-                <div> Pricing</div>
-                <div> How it work</div>
-                <div> Support</div>
-                <div> About Us</div>
+                <div className="text-black"> Pricing</div>
+                <div className="text-black"> How it work</div>
+                <div className="text-black"> Support</div>
+                <div className="text-black"> About Us</div>
                 <div className="grid gap-5 md:hidden w-full px-4  ">
                   <button className="bg-[#6161FF] border border-black rounded-md  font-medium w-full py-4  lg:px-6 lg:py-3  ">
                     Get Started
                   </button>
-                  <button className=" border py-4 border-black lg:px-6 lg:py-3  rounded-md">
+                  <button className=" border py-4 border-black lg:px-6 lg:py-3  rounded-md text-black">
                     {" "}
                     Billers
                   </button>
                   <button
-                    className="border border-black py-4 lg:px-6 lg:py-3 rounded-md"
+                    className="border border-black py-4 lg:px-6 lg:py-3 rounded-md  text-black"
                     onClick={() => {
                       navigate("/login");
                     }}
@@ -170,16 +175,26 @@ const Header = () => {
                 </div>
               </section>
             </div>
+           
 
-            <div
-              className="md:hidden flex items-center justify-center h-14 w-14 text-3xl"
-              onClick={() => setOpen(!open)}
-            >
-              <ion-icon
-                name={open ? "close" : "menu-outline"}
-                className="bg-black"
-              ></ion-icon>
-            </div>
+           {/* <div className="bg-black">
+           <svg width="200" height="200" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.75 5.75H19.25"></path>
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.75 18.25H19.25"></path>
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.75 12H19.25"></path>
+</svg>
+           </div> */}
+
+
+<div
+  className=" flex items-center justify-center h-14 w-14 text-3xl bg-gray-500"
+  onClick={() => setOpen(!open)}
+>
+  <ion-icon
+    name={open ? "close" : "menu-outline"}
+    className="text-black"
+  ></ion-icon>
+</div>
 
             <div className="space-x-2 hidden md:block">
               <button className="bg-[#6161FF] border border-black rounded-md  text-white font-medium  px-3 py-1  ">

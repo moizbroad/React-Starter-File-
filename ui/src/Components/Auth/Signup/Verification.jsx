@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState,useRef } from 'react';
 import "tw-elements-react/dist/css/tw-elements-react.min.css";
 import InputField from "../../CustomComponent/InputField";
 import imagesign from "..//..//../assets/icons/img-sign-up-screen-4.svg";
@@ -9,7 +9,40 @@ import openlock from '..//..//../assets/icons/openlock.png';
 
 
 const Verification = () => {
-  
+
+  const inputRefs = useRef(Array(5).fill(null));
+
+  const handleChange = (index, e) => {
+    const value = e.target.value;
+
+    if (/^\d$/.test(value)) {
+      // Only allow one digit
+      // Update the current input field value
+      e.target.value = value;
+
+      // Move focus to the next input field if available
+      if (index < inputRefs.current.length - 1) {
+        inputRefs.current[index + 1].focus();
+      }
+    } else if (e.key === 'Backspace' && value === '') {
+      // If backspace is pressed and the input is empty, move focus to the previous input field
+      if (index > 0) {
+        inputRefs.current[index - 1].focus();
+      }
+    } else {
+      // Clear the input if it's not a digit
+      e.target.value = '';
+    }
+  };
+  const handlePaste = (e) => {
+    e.preventDefault();
+    const pastedText = e.clipboardData.getData('text/plain').replace(/[^\d]/g, '');
+
+    // Iterate through the input fields and assign each digit
+    for (let i = 0; i < Math.min(pastedText.length, inputRefs.current.length); i++) {
+      inputRefs.current[i].value = pastedText[i];
+    }
+  };
   return (
    
 
@@ -42,71 +75,24 @@ const Verification = () => {
 
 
 
-        <div className="flex  space-x-4 justify-center mt-6 ">
-          <div className=''> 
-          <label htmlFor="myInput"></label>
+        <div className="flex space-x-4 justify-center mt-6">
+      {Array(5).fill(null).map((_, index) => (
+        <div key={index} className="">
+          <label htmlFor={`myInput${index + 1}`}></label>
           <input
-            className="border border-blue-600 py-2 px-4 rounded-lg w-11 bg-[#EAEAFF] "
+            ref={(ref) => (inputRefs.current[index] = ref)}
+            className="border border-blue-600 py-2 px-4 rounded-lg w-11 bg-[#EAEAFF]"
             type="text"
-            id="first Name"
-            onFocus={true}
-            autoFocus={true}
-            // value={value}
-            // onChange={handleChange}
+            id={`myInput${index + 1}`}
+            maxLength="1"  // Set maximum length to 1
+            onChange={(e) => handleChange(index, e)}
+            onKeyDown={(e) => handleChange(index, e)}  
+            onPaste={handlePaste}
             placeholder=" "
           />
-          </div>
-
-          <div className=''> 
-          <label htmlFor="myInput"></label>
-          <input
-            className="border border-blue-600 py-2 px-4 rounded-lg w-11 bg-[#EAEAFF] "
-            type="text"
-            id="first Name"
-            onFocus={true}
-            autoFocus={true}
-            // value={value}
-            // onChange={handleChange}
-            placeholder=" "
-          />
-          </div>
-
-          <div className=''> 
-          <label htmlFor="myInput"></label>
-          <input
-            className="border border-blue-600 py-2 px-4 rounded-lg w-11 bg-[#EAEAFF] "
-            type="text"
-            id="first Name"
-            // value={value}
-            // onChange={handleChange}
-            placeholder=" "
-          />
-          </div>
-
-          <div className=''> 
-          <label htmlFor="myInput"></label>
-          <input
-            className="border border-blue-600 py-2 px-4 rounded-lg w-11 bg-[#EAEAFF] "
-            type="text"
-            id="first Name"
-            // value={value}
-            // onChange={handleChange}
-            placeholder=" "
-          />
-          </div>
-
-          <div className=''> 
-          <label htmlFor="myInput"></label>
-          <input
-            className="border border-blue-600 py-2 px-4 rounded-lg w-11 bg-[#EAEAFF] "
-            type="text"
-            id="first Name"
-            // value={value}
-            // onChange={handleChange}
-            placeholder=" "
-          />
-          </div>         
         </div>
+      ))}
+    </div>
 
         <div className="flex  justify-center mt-4 ">
           <p className='text-blue-500 '> Didn’t get a code?  </p>

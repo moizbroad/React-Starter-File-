@@ -1,4 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+// module.exports = {
+//   theme: {
+//     screens: {
+//       'xxs': '2px',
+//       // => @media (min-width: 640px) { ... }
+//     }}}
 export default {
    content: [
     "./index.html",
@@ -9,10 +15,9 @@ export default {
       fontFamily: {
         nunito: ['Nunito', 'sans-serif,', 'Circular-std'],
       },
+      
     },
-    // screens:{
-    //   'xs':'400px'
-    // }
+    
   },
   plugins: [],
 }

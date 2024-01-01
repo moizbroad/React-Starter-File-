@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Header from "../../Header/Header";
+import Header from "../../HeaderSection/Header";
 import imagesign from "..//..//../assets/icons/img-sign-up-screen-4.svg";
 import usalogo from "..//..//..//assets/icons/usalogo.png";
 import InputField from "../../CustomComponent/InputField";

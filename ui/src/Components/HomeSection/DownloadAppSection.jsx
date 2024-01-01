@@ -22,15 +22,15 @@ const GetStartedFree = () => {
             customers!
           </p>{" "}
         </div>
-        <div className="flex justify-center space-x-6 pt-4">
-          <button className="text-white bg-[#252849] font-semibold py-2 px-3 border border-black  rounded-md flex items-center gap-x-2">
+        <div className="flex     pt-4  flex-wrap items-center justify-center sm:space-x-8 ">
+          <button className="text-white bg-[#252849] font-semibold py-2 px-3 border border-black  rounded-md flex items-center gap-x-2  ">
             {" "}
             <img src={iphone} className="w-6 h-6 " /> App Store{" "}
           </button>
 
           <button
             className=" bg-white
-           py-2 px-3 border border-black  rounded-md flex items-center gap-x-2  text-[#252849] font-semibold"
+           py-2 px-3 border border-black  rounded-md flex items-center gap-x-2   text-[#252849] font-semibold "
           >
             {" "}
             <img src={play} className="w-6 h-6 " /> App Store{" "}
