@@ -1,9 +1,9 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import group1 from "../../assets/icons/group1.png";
 import { IoMdMenu } from "react-icons/io";
-import { ImCross } from "react-icons/im";
+import { GiTireIronCross } from "react-icons/gi";
 // import Login from '..//Auth/Login/Login'
 
 const Header = () => {
@@ -12,12 +12,25 @@ const Header = () => {
 
   const [open, setOpen] = useState(false);
   const [closes, setCloses] = useState(false);
+  
+  useEffect(() => {
+    // Update body styles when 'open' changes
+    document.body.style.overflowY = open ? 'hidden' : 'auto';
+
+    // Cleanup on component unmount
+    return () => {
+      document.body.style.overflowY = 'auto';
+    };
+  }, [open]);
+
+  
+
 
   return (
     <>
       <mian className=" w-[100%] ">
         <div className="bg-[#E9EAFF]">
-          <nav className="relative main flex flex-wrap items-center  w-full justify-end xl:justify-between mx-auto pt-[51px] gap-x-8 container-wrap ">
+          <nav className="relative main flex flex-wrap items-center bg-white md:bg-[#E9EAFF] w-full justify-end xl:justify-between mx-auto pt-[22px] md:pt[51px] gap-x-8 container-wrap border-b border-black  md:border-none  h-[100%]">
             <div className=" flex items-start justify-start gap-x-3 ">
               <svg
                 width="20"
@@ -49,8 +62,8 @@ const Header = () => {
             </div>
 
             <div
-              className={` top-20 h-screen w-full  text-white md:text-black md:bg-white md:h-auto md:w-auto md:flex gap-x-5 md:justify-end absolute md:static transition-all duration-700 ease-in ${
-                open ? "top-[75px] opacity-100" : "top-[-900px]"
+              className={`top-20 h-screen w-full  text-white md:text-black md:bg-white md:h-auto md:w-auto md:flex gap-x-5 md:justify-end absolute md:static transition-all duration-700 ease-in ${
+                open ? "top-[80px] opacity-100 scroll-auto " : "top-[-900px]"
               } md:opacity-100`}
             >
               <section className="lg:relative flex flex-col md:flex-row gap-3 justify-center items-center lg:gap-5 text-lg bg-white md:bg-[#E9EAFF]  ">
@@ -61,6 +74,8 @@ const Header = () => {
                   {" "}
                   Products
                 </div>
+
+
                 {closes && (
                   <section className="lg:absolute top-12 bg-white   border-b-2  py-3">
                     <div className="px-4">
@@ -151,21 +166,22 @@ const Header = () => {
                     </div>
                   </section>
                 )}
+                
 
                 <div className="text-black"> Pricing</div>
                 <div className="text-black"> How it work</div>
                 <div className="text-black"> Support</div>
                 <div className="text-black"> About Us</div>
                 <div className="grid gap-5 md:hidden w-full px-4  ">
-                  <button className="bg-[#6161FF] border border-black rounded-md  font-medium w-full py-4  lg:px-6 lg:py-3  ">
+                  <button className="bg-[#6161FF] border border-black rounded-md  font-medium w-full py-2  lg:px-6 lg:py-3  ">
                     Get Started
                   </button>
-                  <button className=" border py-4 border-black lg:px-6 lg:py-3  rounded-md text-black">
+                  <button className=" border py-2 border-black lg:px-6 lg:py-3  rounded-md text-black">
                     {" "}
                     Billers
                   </button>
                   <button
-                    className="border border-black py-4 lg:px-6 lg:py-3 rounded-md  text-black"
+                    className="border border-black py-2 lg:px-6 lg:py-3 rounded-md  text-black"
                     onClick={() => {
                       navigate("/login");
                     }}
@@ -177,25 +193,27 @@ const Header = () => {
             </div>
            
 
-           {/* <div className="bg-black">
-           <svg width="200" height="200" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.75 5.75H19.25"></path>
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.75 18.25H19.25"></path>
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.75 12H19.25"></path>
-</svg>
-           </div> */}
+          
 
 
 <div
-  className=" flex items-center justify-center h-14 w-14 text-3xl bg-gray-500"
+  className=" md:hidden flex items-center justify-center h-14 w-14 text-3xl "
   onClick={() => setOpen(!open)}
 >
-  <ion-icon
-    name={open ? "close" : "menu-outline"}
-    className="text-black"
-  ></ion-icon>
+  {
+    open ? <GiTireIronCross/> : <IoMdMenu/>
+   
+}
+
+
+  {open && (
+        <div className="md:hidden overflow-y-auto h-full">
+          {/* Your scrolling content goes here */}
+        </div>
+      )}
 </div>
 
+                      {/* long nav bar  */}
             <div className="space-x-2 hidden md:block">
               <button className="bg-[#6161FF] border border-black rounded-md  text-white font-medium  px-3 py-1  ">
                 Get Started

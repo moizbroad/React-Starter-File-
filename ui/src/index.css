@@ -112,3 +112,8 @@ margin-inline: auto;
 .login-screen > div {
 background-color:transparent;
 }
+
+abc {
+  overflow-y: hidden;
+  margin: 0; /* Optional: reset margin */
+}
