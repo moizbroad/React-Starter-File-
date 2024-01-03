@@ -11,7 +11,7 @@ import daycare from "..//..//assets/cards/daycare.svg";
 
 import water from "..//..//assets/cards/Water-bills.svg";
 import dental from "..//..//assets/cards/dentals.svg";
-import phone from "..//..//assets/cards/phone-bills.svg";
+// import phone from "..//..//assets/cards/phone-bills.svg";
 import cabel from "..//..//assets/cards/cables.svg";
 import pet from "..//..//assets/cards/pet.svg";
 import eduaction from "..//..//assets/cards/Eduaction.svg";
@@ -80,7 +80,7 @@ const Cards = () => {
         "Maintain your oral health without compromise – our dental bill assistance, ensures you can smile confidently",
     },
     {
-      image: phone,
+      image: dental,
       title: "Rent",
       detail:
         "Keep your lines open and worry-free – our phone bill solutions, offer a reliable way to stay connected without straining your budget.",
