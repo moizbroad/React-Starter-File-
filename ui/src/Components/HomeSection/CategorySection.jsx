@@ -8,7 +8,7 @@ import gas from "..//..//assets/cards/gas&Electric.svg";
 import hospital from "..//..//assets/cards/Hospital.svg";
 import car from "..//..//assets/cards/Car-repair.svg";
 import daycare from "..//..//assets/cards/daycare.svg";
-import insurance from "..//..//assets/cards/insurance.svg";
+
 import water from "..//..//assets/cards/Water-bills.svg";
 import dental from "..//..//assets/cards/dentals.svg";
 import phone from "..//..//assets/cards/phone-bills.svg";
@@ -17,11 +17,7 @@ import pet from "..//..//assets/cards/pet.svg";
 import eduaction from "..//..//assets/cards/Eduaction.svg";
 
 const Cards = () => {
-  // const [selectedDiv, setSelectedDiv] = useState(0);
 
-  // const handleDivClick = (index) => {
-  //   setSelectedDiv(index);
-  // };
   const [cards, setCards] = useState([
     {
       image: rent,
@@ -66,7 +62,7 @@ const Cards = () => {
         "Ensure your child's care and well-being – our day care bill assistance, offers a helping hand during financial constraints",
     },
     {
-      image: insurance,
+      image:  daycare,
       title: "Rent",
       detail:
         "Secure your peace of mind even when funds are limited – our insurance bill support offers a safety net to keep your coverage intact.",

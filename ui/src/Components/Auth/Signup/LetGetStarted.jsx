@@ -8,30 +8,31 @@ import openlock from "..//..//../assets/icons/openlock.png";
 import Button from "../../CustomComponent/Button";
 
 const LetGetStarted = () => {
-  const [value, setValue] = useState("");
-  const [isValid, setIsValid] = useState(true);
-  const [isActive, setIsActive] = useState(false); // checkbox
 
+ 
+
+  const [state , setState ] = useState({
+    value:"",
+    isValid: true
+
+  })
   const handleChange = (event) => {
-    const inputValue = event.target.value;
 
     // Check if the input matches the USA phone number format
-    const isValidInput = /^\d{0,10}$/.test(inputValue);
-
-    // Update the valid status
-    setIsValid(isValidInput);
+    const isValidInput = /^\d{0,10}$/.test(event.target.value);
 
     // If the input is valid, update the state
     if (isValidInput) {
-      setValue(inputValue);
+      setState((prevState) => ({
+        ...prevState,
+        value: event.target.value,
+        isValid: isValidInput
+      }))
     }
   };
+  
 
-  // checkbox
-
-  const handleToggle = () => {
-    setIsActive(!isActive);
-  };
+  
   return (
     <main className="wrap1">
       <section className="grid lg:grid-cols-2 md:grid-cols-2 gap-x-[260px] px-4 lg:px-0">
@@ -64,9 +65,8 @@ const LetGetStarted = () => {
               className="border border-blue-600 py-2 px-9 rounded-lg "
               type=""
               id="number"
-              value={value}
+              value={state.value}
               onChange={handleChange}
-              // onChange={handleChange}
               placeholder="Usa number"
             />
 
