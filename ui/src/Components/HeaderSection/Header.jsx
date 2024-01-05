@@ -188,6 +188,7 @@ const Header = () => {
                   >
                     Login
                   </button>
+                 
                 </div>
               </section>
             </div>
@@ -231,6 +232,9 @@ const Header = () => {
                 {" "}
                 Login
               </button>
+              <button className="border border-black py-1 px-2 lg:px-3 lg:py-1 rounded-md  text-black" onClick={() => {
+                  navigate("/signup");
+                }}> signup</button>
             </div>
           </nav>
         </div>

@@ -9,6 +9,14 @@ import Button from "../../CustomComponent/Button";
 
 const LetGetStarted = () => {
 
+ const [getdata, SetGetData] = useState([
+  {
+    phoneNumber:"",
+    firstName:"",
+    lastName:"",
+  }
+ ]) 
+
  
 
   const [state , setState ] = useState({
@@ -31,7 +39,19 @@ const LetGetStarted = () => {
     }
   };
   
+  
+////  APIS Calls 
+const letGetStrated = async()=>{
+let data ={
+    phoneNumber:getdata.phoneNumber,
+    firstName:getdata.firstName,
+    lastName:getdata.lastName,
+};
+try{
+  const res= await res.
+}
 
+}
   
   return (
     <main className="wrap1">

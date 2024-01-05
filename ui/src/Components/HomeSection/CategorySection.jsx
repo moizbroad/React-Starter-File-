@@ -4,7 +4,7 @@ import { useState } from "react";
 import rent from "..//..//assets/cards/rent.svg";
 import carpaymnets from "..//..//assets/cards/carpayment.svg";
 import mortage from "..//..//assets/cards/mortgage.svg";
-import gas from "..//..//assets/cards/gas&Electric.svg";
+import gas from "..//..//assets/cards/gas&Electric.svg"; 
 import hospital from "..//..//assets/cards/Hospital.svg";
 import car from "..//..//assets/cards/Car-repair.svg";
 import daycare from "..//..//assets/cards/daycare.svg";
