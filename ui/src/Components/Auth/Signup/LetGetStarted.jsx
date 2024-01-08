@@ -1,64 +1,59 @@
 import React from "react";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import "tw-elements-react/dist/css/tw-elements-react.min.css";
 import InputField from "../../CustomComponent/InputField";
 import imagesign from "..//..//../assets/icons/img-sign-up-screen-4.svg";
 import usalogo from "..//..//..//assets/icons/usalogo.png";
 import openlock from "..//..//../assets/icons/openlock.png";
 import Button from "../../CustomComponent/Button";
+import axios from "axios";
+
 
 const LetGetStarted = () => {
+  const [state, setState] = useState({
+    isValid: true,
+    phoneNumber: "",
+    firstName: "",
+    lastName: "",
+  });
+  // const [isToggled, setToggled] = useState(false);
 
- const [getdata, SetGetData] = useState([
-  {
-    phoneNumber:"",
-    firstName:"",
-    lastName:"",
-  }
- ]) 
+  // const toggleButton = () => {
+  //   setToggled(!isToggled);
+  // };
 
- 
+  ////  APIS Calls
 
-  const [state , setState ] = useState({
-    value:"",
-    isValid: true
+useEffect(()=>{
 
-  })
-  const handleChange = (event) => {
+},[console.log(state)])
+  const letGetStarted = async () => {
+    let data = {
+      phoneNumber: state.phoneNumber,
+      firstName: state.firstName,
+      lastName: state.lastName,
+    };
+    try {
+      const res = await axios.post(
+        "https://gn9y85je18.execute-api.us-west-1.amazonaws.com/dev/api/user/register/otp/get",
+        data
+      );
 
-    // Check if the input matches the USA phone number format
-    const isValidInput = /^\d{0,10}$/.test(event.target.value);
-
-    // If the input is valid, update the state
-    if (isValidInput) {
-      setState((prevState) => ({
-        ...prevState,
-        value: event.target.value,
-        isValid: isValidInput
-      }))
+      console.log("Account created successfully", res.data);
+      if (res.status == 200) {
+        // Further Code after success
+      }
+    } catch (e) {
+      console.log(e);
     }
   };
-  
-  
-////  APIS Calls 
-const letGetStrated = async()=>{
-let data ={
-    phoneNumber:getdata.phoneNumber,
-    firstName:getdata.firstName,
-    lastName:getdata.lastName,
-};
-try{
-  const res= await res.
-}
 
-}
-  
   return (
     <main className="wrap1">
       <section className="grid lg:grid-cols-2 md:grid-cols-2 gap-x-[260px] px-4 lg:px-0">
         <div>
           <div className="mt-8 flex  flex-col  ">
-            <div className="flex  justify-center">
+            <div className="flex  justify-center lg:w-[512px]">
               <svg
                 width="90"
                 height="90"
@@ -73,69 +68,95 @@ try{
               </svg>
             </div>
 
-            <div className=" text-center mt-2 ">
+            <div className=" text-center mt-2 lg:w-[512px]">
               <h1 className="font-bold text-3xl pb-1"> Let's gets Started </h1>
-              <p> Tell us a bit about yourself. We just need the basics</p>
+              <p className="text-lg">
+                {" "}
+                Tell us a bit about yourself. We just need the basics
+              </p>
             </div>
           </div>
-
-          <div className="flex  flex-col gap-y-2 relative mt-4 ">
-            <img src={usalogo} className="w-5 h-5 absolute top-3 left-1" />
-            <input
-              className="border border-blue-600 py-2 px-9 rounded-lg "
-              type=""
-              id="number"
-              value={state.value}
-              onChange={handleChange}
-              placeholder="Usa number"
-            />
-
-            <InputField type="text" id="First Name" placeholder="First Name " />
-
-            <InputField type="text" id="First Name" placeholder="Last Name " />
-          </div>
-
-          <div className="flex  justify-between mt-5">
-            <p> I have referral code </p>
-
-            <div className="flex justify-end">
+          <div className="flex  flex-col gap-y-2 relative mt-4 py-3  w-[518px] ">
+            <div className="flex items-center  justify-start border-2 border-[#6161Ff] rounded-lg shadow-primary py-3 px-[14px]  gap-x-3  lg:h-[62px] ">
+              {" "}
+              <img src={usalogo} className="w-9 h-9 " />
               <input
-                className="mr-2  mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-neutral-100 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-neutral-600 dark:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckDefault"
-                onClick={""}
+                className="h-full w-full focus:outline-none"
+                type="text"
+                id="number"
+                maxLength={13}
+                value={state.phoneNumber}
+                onChange={(e) => {
+                  const numericValue = e.target.value.replace(/[^0-9+]/g, "");
+                  setState((prevState) => ({
+                    ...prevState,
+                    phoneNumber: numericValue,
+                  }));
+                }}
+                placeholder="Usa number"
               />
+            </div>
+
+            <div>
+              <InputField
+                type="text"
+                id="First Name"
+                placeholder="First Name"
+                value={state.firstName}
+                onChange={(e) =>
+                  setState((prevState) => ({
+                    ...prevState,
+                    firstName: e.target.value,
+                  }))
+                }
+              />
+            </div>
+
+            <div>
+              <InputField
+                type="text"
+                id="Last Name"
+                placeholder="Last Name "
+                value={state.lastName}
+                onChange={(e) =>
+                  setState((prevState) => ({
+                    ...prevState,
+                    lastName: e.target.value,
+                  }))
+                }
+              />
+            </div>
+          </div>
+          <div className="flex  justify-between mt-5 lg:w-[512px]">
+            <p> I have referral code </p>
+            <div className="flex justify-end">
+              <div>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
               <label
                 className="inline-block pl-[0.15rem] hover:cursor-pointer"
                 htmlFor="flexSwitchCheckDefault"
               ></label>
-            </div>
-
-            
-              {" "}
-             
-        
-
-          </div>
-         
-            {" "}
-            {/* <button className="px-[165px] py-2 flex items-center rounded-lg bg-blue-600  gap-x-2 text-white">
+            </div>{" "}
+          </div>{" "}
+          {/* <button className="px-[165px] py-2 flex items-center rounded-lg bg-blue-600  gap-x-2 text-white">
               {" "}
               <img src={openlock} className="w-5 h-4" /> Continue{" "}
             </button> */}
-            <div className="flex mt-5">
+          <div className="flex mt-5 w-[512px] ">
+            {" "}
+            <button
+              onClick={letGetStarted}
+              className=" py-4 justify-center w-[100%] flex items-center rounded-lg  bg-[#6161ff]   gap-x-2 text-white"
+            >
               {" "}
-              <button className=" py-2 justify-center w-[100%] flex items-center rounded-lg bg-blue-600  gap-x-2 text-white">
-                {" "}
-                <img src={openlock} className="w-5 h-4" /> Continue{" "}
-              </button>
-            </div>
-
-
-
+              <img src={openlock} className="w-5 h-[27px] " /> Continue{" "}
+            </button>
           </div>
-        
+        </div>
 
         <div className="flex justify-center align-top mt-10 md:mt-10">
           {" "}

@@ -18,21 +18,21 @@ const Signup = () => {
       <section className="pt-20 flex space-x-4 justify-center lg:justify-start ">
         <div
           className={`${
-            selectedDiv === 0 ? "bg-blue-800" : "bg-gray-200"
+            selectedDiv === 0 ? "bg-[#6161FF]" : "bg-gray-200"
           }   h-2.5 w-[150px]  rounded-full`}
           onClick={() => handleDivClick(0)}
         ></div>
 
         <div
           className={`${
-            selectedDiv === 1 ? "bg-blue-800" : "bg-gray-200"
+            selectedDiv === 1 ? "bg-[#6161FF]" : "bg-gray-200"
           } h-2.5 w-[150px]  rounded-full`}
           onClick={() => handleDivClick(1)}
         ></div>
 
         <div
           className={`${
-            selectedDiv === 2 ? "bg-blue-800" : "bg-gray-200"
+            selectedDiv === 2 ? "bg-[#6161FF]" : "bg-gray-200"
           } h-2.5 w-[150px]  rounded-full`}
           onClick={() => handleDivClick(2)}
         ></div>

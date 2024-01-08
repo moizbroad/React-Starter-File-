@@ -18,7 +18,7 @@ const CreateUserAccount = () => {
             </div>
           </div>
 
-          <div className="flex  flex-col gap-y-2 relative mt-2 ">
+          <div className="flex  flex-col gap-y-2 relative mt-2 lg:w-[512px] ">
             <InputField
               type="text"
               id="First Name"
@@ -44,7 +44,7 @@ const CreateUserAccount = () => {
             />
           </div>
 
-          <div className="flex  space-x-1">
+          <div className="flex  space-x-1 lg:w-[518px]">
             {" "}
             <button className="w-[100%] justify-center py-2 flex items-center rounded-lg bg-blue-600  gap-x-2 text-white mt-10">
               {" "}
