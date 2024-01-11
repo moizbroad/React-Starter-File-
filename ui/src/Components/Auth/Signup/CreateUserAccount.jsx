@@ -4,7 +4,10 @@ import InputField from "../../CustomComponent/InputField";
 import imagesign from "..//..//../assets/icons/img-sign-up-screen-4.svg";
 import usalogo from "..//..//..//assets/icons/usalogo.png";
 import openlock from "..//..//../assets/icons/openlock.png";
-const CreateUserAccount = () => {
+const CreateUserAccount = ({tempToken}) => {
+  // const {tempToken} = props 
+  console.log(tempToken,"token")
+
   return (
     <main className="wrap1">
       <section className="grid lg:grid-cols-2 gap-x-[260px] px-4 lg:px-0">

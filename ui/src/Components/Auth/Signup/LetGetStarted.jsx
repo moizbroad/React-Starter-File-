@@ -10,12 +10,12 @@ import axios from "axios";
 
 
 const LetGetStarted = () => {
-  const [state, setState] = useState({
-    isValid: true,
-    phoneNumber: "",
-    firstName: "",
-    lastName: "",
-  });
+  // const [state, setState] = useState({
+  //   isValid: true,
+  //   phoneNumber: "",
+  //   firstName: "",
+  //   lastName: "",
+  // });
   // const [isToggled, setToggled] = useState(false);
 
   // const toggleButton = () => {

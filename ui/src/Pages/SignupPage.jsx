@@ -5,7 +5,7 @@ import LetGetStarted from "../Components/Auth/Signup/LetGetStarted";
 import Verification from "../Components/Auth/Signup/Verification";
 import CreateUserAccount from "../Components/Auth/Signup/CreateUserAccount";
 
-const Signup = () => {
+const Signup = (props) => {
   const [selectedDiv, setSelectedDiv] = useState(0);
 
   const handleDivClick = (index) => {
